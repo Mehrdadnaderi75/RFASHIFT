@@ -13,9 +13,8 @@
     <style>
       :root {
         --app-bg: #000814;
-        --card-bg: rgba(0, 29, 61, 0.7);
+        --card-bg: rgba(0, 29, 61, 0.5);
         --accent: #ffc300;
-        --text-dim: #8e9aaf;
       }
       body {
         font-family: 'Vazirmatn', sans-serif;
@@ -25,27 +24,22 @@
         padding: 0;
         overflow: hidden;
         height: 100vh;
-        user-select: none;
         -webkit-tap-highlight-color: transparent;
       }
       #root { height: 100%; }
       .glass {
         background: var(--card-bg);
-        backdrop-filter: blur(12px);
+        backdrop-filter: blur(16px);
         border: 1px solid rgba(255, 255, 255, 0.05);
       }
-      .neon-border:focus {
-        border-color: var(--accent);
-        box-shadow: 0 0 15px rgba(255, 195, 0, 0.3);
+      .neon-glow {
+        box-shadow: 0 0 15px rgba(255, 195, 0, 0.2);
       }
-      .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
-      
-      @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+      @keyframes slideUp {
+        from { transform: translateY(30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
       }
-      .animate-fade-up { animation: fadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-      
+      .animate-slide-up { animation: slideUp 0.4s ease-out forwards; }
       ::-webkit-scrollbar { display: none; }
     </style>
     <script type="importmap">
