@@ -1,0 +1,19 @@
+{
+  "name": "Shift RFA Mobile",
+  "short_name": "ShiftRFA",
+  "description": "سیستم جامع مدیریت شیفت و عملیات راهبر فرآیند آریا",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/fluency/512/factory.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#001529",
+  "background_color": "#001529",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
