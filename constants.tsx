@@ -1,31 +1,30 @@
 
 import { User, UserRole, ShiftType } from './types';
 
-export const STORAGE_KEY = 'SHIFT_RFA_STABLE_V1';
+export const STORAGE_KEY = 'RFA_SHIFT_MASTER_V2';
 
 export const INITIAL_SUPER_ADMIN: User = {
   personnelId: '123456789',
-  name: 'مدیر کل سیستم',
+  name: 'مدیریت ارشد آریا',
   password: '123456789',
   role: UserRole.SUPER_ADMIN,
   createdAt: Date.now()
 };
 
 export const SHIFT_LABELS: Record<ShiftType, string> = {
-  [ShiftType.DAY]: 'شیفت روز (۰۷:۰۰)',
-  [ShiftType.NIGHT]: 'شیفت شب (۱۹:۰۰)',
-  [ShiftType.REST]: 'استراحت / OFF'
+  [ShiftType.DAY]: 'شیفت روز (آفتاب)',
+  [ShiftType.NIGHT]: 'شیفت شب (مهتاب)',
+  [ShiftType.REST]: 'استراحت / مرخصی'
 };
 
 export const SHIFT_COLORS: Record<ShiftType, string> = {
-  [ShiftType.DAY]: 'bg-amber-50 text-amber-700 border-amber-200',
-  [ShiftType.NIGHT]: 'bg-indigo-50 text-indigo-700 border-indigo-200',
-  [ShiftType.REST]: 'bg-emerald-50 text-emerald-700 border-emerald-200'
+  [ShiftType.DAY]: 'bg-yellow-500/10 text-yellow-400 border-yellow-500/30',
+  [ShiftType.NIGHT]: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
+  [ShiftType.REST]: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
 };
 
-// Fix: Added missing SHIFT_ICONS mapping
 export const SHIFT_ICONS: Record<ShiftType, string> = {
   [ShiftType.DAY]: '☀️',
   [ShiftType.NIGHT]: '🌙',
-  [ShiftType.REST]: '🏠'
+  [ShiftType.REST]: '🛌'
 };
