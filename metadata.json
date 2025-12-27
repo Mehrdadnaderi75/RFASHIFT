@@ -1,19 +1,17 @@
 {
-  "name": "Shift RFA Mobile",
-  "short_name": "ShiftRFA",
-  "description": "سیستم جامع مدیریت شیفت و عملیات راهبر فرآیند آریا",
+  "name": "هوش ریاضی",
+  "short_name": "MathIntel",
+  "description": "بازی هوشمند ذهن‌خوانی با اعداد",
   "icons": [
     {
-      "src": "https://img.icons8.com/fluency/512/factory.png",
+      "src": "https://img.icons8.com/fluency/512/brainstorming.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#001529",
-  "background_color": "#001529",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "theme_color": "#000814",
+  "background_color": "#000814",
+  "requestFramePermissions": []
 }

@@ -7,14 +7,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="theme-color" content="#000814" />
-    <title>RFASHIFT | مدیریت هوشمند فرآیند</title>
+    <title>هوش ریاضی | Math Intelligence</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
       :root {
         --app-bg: #000814;
-        --card-bg: rgba(0, 29, 61, 0.5);
         --accent: #ffc300;
+        --glass: rgba(255, 195, 0, 0.05);
       }
       body {
         font-family: 'Vazirmatn', sans-serif;
@@ -24,24 +27,30 @@
         padding: 0;
         overflow: hidden;
         height: 100vh;
-        -webkit-tap-highlight-color: transparent;
+        user-select: none;
       }
-      #root { height: 100%; }
-      .glass {
-        background: var(--card-bg);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 195, 0, 0.1);
+        border-radius: 2rem;
       }
-      .neon-glow {
-        box-shadow: 0 0 15px rgba(255, 195, 0, 0.2);
+      .glow-text {
+        text-shadow: 0 0 20px rgba(255, 195, 0, 0.5);
       }
-      @keyframes slideUp {
-        from { transform: translateY(30px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
       }
-      .animate-slide-up { animation: slideUp 0.4s ease-out forwards; }
-      ::-webkit-scrollbar { display: none; }
+      .animate-float { animation: float 3s ease-in-out infinite; }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      .animate-in { animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     </style>
+    
     <script type="importmap">
 {
   "imports": {
@@ -56,6 +65,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="index.tsx"></script>
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>
